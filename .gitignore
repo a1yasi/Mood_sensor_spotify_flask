@@ -1,0 +1,5 @@
+venv/
+.cache-*
+Spotify_keys.json
+weather_key.txt
+__pycache__

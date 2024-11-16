@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title></title>
+</head>
+<body>
+	<h1>Mood Sensor</h1>
+	<form method="POST">
+		<label for="req_city">City</label>
+		<input name="req_city" type="text" value="{{city}}" required><br><br>
+
+		<label for="mood">Mood</label>
+		<input name="mood" type="text" placeholder="Enter mood" required><br><br>
+
+		<input type="submit" value="Submit"><br><br>
+	</form>
+
+	
+	{% if playlist_id %}
+	<iframe style="border-radius:12px" 
+	src="https://open.spotify.com/embed/playlist/{{playlist_id}}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+	{% endif %}
+
+</body>
+</html>
