@@ -3,13 +3,14 @@ from weather_spotify import get_playlist
 
 app = Flask(__name__)
 
+
 default_city = "London"
 
 
 @app.route('/', methods=['POST'])
 def index_post():
 	user_city = request.form.get('req_city', default_city)
-	user_mood = request.form.get('mood', None)
+	user_mood = request.form.get('mood','')
 
 
 	my_playlist = get_playlist(user_city, user_mood)

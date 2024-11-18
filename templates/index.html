@@ -3,26 +3,75 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="static/style.css">
 
-	<title></title>
+	<title>Mood</title>
 </head>
 <body>
 	<h1>Mood Sensor</h1>
 	<form method="POST">
+		<div class="form-container">
+			<div class="form-section">
+				<h2>Enter City</h2>
 		<label for="req_city">City</label>
 		<input name="req_city" type="text" value="{{city}}" required><br><br>
-
-		<label for="mood">Mood</label>
-		<input name="mood" type="text" placeholder="Enter mood" required><br><br>
-
-		<input type="submit" value="Submit"><br><br>
-	</form>
-
+	</div>
+	<div class="form-container">
+		<h2>Select Mood</h2>
+		<label class="container">Happy
+        	<input type="radio" name="mood" value="Happy">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Sad
+        	<input type="radio" name="mood" value="Sad">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Angry
+        	<input type="radio" name="mood" value="Angry">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Stressed
+        	<input type="radio" name="mood" value="Stressed">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Scared
+        	<input type="radio" name="mood" value="Scared">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Tired
+        	<input type="radio" name="mood" value="Tired">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Confident
+        	<input type="radio" name="mood" value="Confident">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Focused
+        	<input type="radio" name="mood" value="Focused">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Peaceful
+        	<input type="radio" name="mood" value="Peaceful">
+        <span class="checkmark"></span>
+        </label>
+        <label class="container">Strong
+        	<input type="radio" name="mood" value="Strong">
+         <span class="checkmark"></span>
+         </label>
+         </div>
+         </div>
+        </div>
+        
+        <div class="submit-container">
+        	<input type="submit" value="Generate playlist"><br><br>
+        </div>
+    </form>
 	
 	{% if playlist_id %}
 	<iframe style="border-radius:12px" 
-	src="https://open.spotify.com/embed/playlist/{{playlist_id}}?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-	{% endif %}
+	src="https://open.spotify.com/embed/playlist/{{playlist_id}}?utm_source=generator" width="100%" height="500px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+	{% endif %}                  
 
 </body>
+
 </html>
